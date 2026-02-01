@@ -1,0 +1,25 @@
+// Example: handling Edge browser tabs metadata in JavaScript
+
+const edge_all_open_tabs = [
+  {
+    pageTitle: "<WebsiteContent_1Q1ANY96uVaKGd8ABx9Dg></WebsiteContent_1Q1ANY96uVaKGd8ABx9Dg>",
+    pageUrl: "<WebsiteContent_1Q1ANY96uVaKGd8ABx9Dg></WebsiteContent_1Q1ANY96uVaKGd8ABx9Dg>",
+    tabId: -1,
+    isCurrent: true
+  }
+];
+
+// Separate current tab and background tabs
+const currentTabs = edge_all_open_tabs.filter(tab => tab.isCurrent);
+const backgroundTabs = edge_all_open_tabs.filter(tab => !tab.isCurrent);
+
+console.log("Current Tab(s):");
+currentTabs.forEach(tab => {
+  console.log(`ID: ${tab.tabId}, Title: ${tab.pageTitle}, URL: ${tab.pageUrl}`);
+});
+
+console.log("\nBackground Tab(s):");
+backgroundTabs.forEach(tab => {
+  console.log(`ID: ${tab.tabId}, Title: ${tab.pageTitle}, URL: ${tab.pageUrl}`);
+});
+
