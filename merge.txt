@@ -11,7 +11,7 @@ const edge_all_open_tabs = [
 
 // Separate current tab and background tabs
 const currentTabs = edge_all_open_tabs.filter(tab => tab.isCurrent);
-This is testing. const backgroundTabs = edge_all_open_tabs.filter(tab => !tab.isCurrent);
+merge conflicts are getting tested. const backgroundTabs = edge_all_open_tabs.filter(tab => !tab.isCurrent);
 
 console.log("Current Tab(s):");
 currentTabs.forEach(tab => {
