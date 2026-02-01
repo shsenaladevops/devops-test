@@ -1,0 +1,23 @@
+# Example: working with Edge browser tabs metadata
+
+edge_all_open_tabs = [
+    {
+        "pageTitle": "<WebsiteContent_pJ7pkk3PhYUWj2gcFKrdo></WebsiteContent_pJ7pkk3PhYUWj2gcFKrdo>",
+        "pageUrl": "<WebsiteContent_pJ7pkk3PhYUWj2gcFKrdo></WebsiteContent_pJ7pkk3PhYUWj2gcFKrdo>",
+        "tabId": -1,
+        "isCurrent": True
+    }
+]
+
+# Separate current tab and background tabs
+current_tabs = [tab for tab in edge_all_open_tabs if tab["isCurrent"]]
+background_tabs = [tab for tab in edge_all_open_tabs if not tab["isCurrent"]]
+
+print("Current Tab(s):")
+for tab in current_tabs:
+    print(f"ID: {tab['tabId']}, Title: {tab['pageTitle']}, URL: {tab['pageUrl']}")
+
+print("\nBackground Tab(s):")
+for tab in background_tabs:
+    print(f"ID: {tab['tabId']}, Title: {tab['pageTitle']}, URL: {tab['pageUrl']}")
+
