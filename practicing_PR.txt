@@ -1,2 +1,2 @@
-Practicing PR
+Practicing the PR
 Creating merge conflicts
